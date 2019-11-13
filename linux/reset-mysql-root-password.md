@@ -16,33 +16,32 @@
 
 - At this stage we are able to access MySQL database without password:
 
-  `mysql -u root`
+  `$ mysql -u root`
 
-Using the MySQL session first flush privileges:
+- Using the MySQL session first flush privileges:
 
-`mysql> FLUSH PRIVILEGES'`
+  `mysql> FLUSH PRIVILEGES'`
 
-Next, reset root password. The following commands will reset MySQL root password to NEWPASSWORD
+- Next, reset root password. The following commands will reset MySQL root password to NEWPASSWORD
 
-`mysql> USE mysql;`
+  `mysql> USE mysql;`
 
-`mysql> UPDATE user SET authentication_string=PASSWORD("NEWPASSWORD") WHERE User='root';`
+  `mysql> UPDATE user SET authentication_string=PASSWORD("NEWPASSWORD") WHERE User='root';`
 
-`mysql> UPDATE user SET plugin="mysql_native_password" WHERE User='root';`
+  `mysql> UPDATE user SET plugin="mysql_native_password" WHERE User='root';`
 
-Quit MySQL session:
+- Quit MySQL session:
 
-`mysql> quit`         
+  `mysql> quit`         
 
-Gracefully terminate current mysqld process:
+- Gracefully terminate current mysqld process:
 
-`sudo pkill mysqld`                                                                                                                                                       
-`jobs`                                                                                                                                                                     
+  `$ sudo pkill mysqld`                                                                                                                                                       
+  `$ jobs`                                                                                                                                                                     
+- Lastly, start MYSQL database:
 
-Lastly, start MYSQL database:
+  `$ sudo service mysql start`
 
-`sudo service mysql start`
+- If all went well you should now be able to login to your MySQL database with a root password:
 
-If all went well you should now be able to login to your MySQL database with a root password:
-
-`mysql -u root --password=NEWPASSWORD`                                                                                           
+  `$ mysql -u root --password=NEWPASSWORD`                                                                                           
