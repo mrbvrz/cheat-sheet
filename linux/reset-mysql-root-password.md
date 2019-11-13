@@ -1,6 +1,6 @@
 # Reset Root MySQL Password 
 
-this problem occurs on **Elementary OS 5.0** and **Mysql Version 14.14**, fails to enter mysql with an error message: `mysqli_real_connect (): (HY000 / 1698): Access denied for user 'root' @ 'localhost'`
+this problem occurs in **Elementary OS 5.0** and **Mysql Version 14.14**, fails to enter mysql with an error message: `mysqli_real_connect (): (HY000 / 1698): Access denied for user 'root' @ 'localhost'`
 
 
 ## Instructions :penguin: :
