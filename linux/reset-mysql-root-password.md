@@ -49,6 +49,8 @@ The simplest approach to reset MySQL database root password is to execute mysql_
 - If all went well you should now be able to login to your MySQL database with a root password:
 
   `$ mysql -u root --password=NEWPASSWORD`    
+  
+  <br>
 
   :space_invader:  :space_invader:  :space_invader:
   
