@@ -1,4 +1,4 @@
-# Install Ayatana AppIndicators In elementary OS 5.0
+# Install Ayatana AppIndicators on Elementary OS 5.0
 
 ## Install Ayatana AppIndicators
 
@@ -16,8 +16,7 @@
   $ wget http://ppa.launchpad.net/elementary-os/stable/ubuntu/pool/main/w/wingpanel-indicator-ayatana/wingpanel-indicator-ayatana_2.0.3+r27+pkg17~ubuntu0.4.1.1_amd64.deb
   $ sudo dpkg -i wingpanel-indicator-ayatana_2.0.3+r27+pkg17~ubuntu0.4.1.1_amd64.deb
   ```
-  
-  or you can downloade **.deb** file [here!](google.com)
+
 
 ## Fix Big Gap Between Icons
 
