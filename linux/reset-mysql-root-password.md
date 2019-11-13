@@ -3,7 +3,7 @@
 this problem occurs on **Elementary OS 5.0** and **Mysql Version 14.14**, fails to enter mysql with an error message: `mysqli_real_connect (): (HY000 / 1698): Access denied for user 'root' @ 'localhost'`
 
 
-## Instructions
+## Instructions :
 
 ### Reset by using mysql_secure_installation
 
