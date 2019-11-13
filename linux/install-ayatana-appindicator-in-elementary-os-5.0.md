@@ -30,3 +30,9 @@
 - Replace the libayatana_compatibility.so with the zipped one
 
 - reboot
+
+  <br>
+
+  :space_invader:  :space_invader:  :space_invader:
+  
+  [Source](https://github.com/mdh34/elementary-indicators/issues/1)
