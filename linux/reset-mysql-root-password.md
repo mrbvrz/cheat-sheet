@@ -4,16 +4,14 @@
 
 - Next, create a /var/run/mysqld directory to be used by MySQL process to store and access socket file:
 
-  `sudo mkdir -p /var/run/mysqld`
-  `sudo chown mysql:mysql /var/run/mysqld`
+  `$ sudo mkdir -p /var/run/mysqld`
+  `$ sudo chown mysql:mysql /var/run/mysqld`
 
 - Once ready manually start MySQL with the following linux command and options:
 
-  `sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &`
+  `$ sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &`
 
-- Confirm that the process is running as expected:
-
-  `jobs`
+- Confirm that the process is running as expected: `$ jobs`
 
 - At this stage we are able to access MySQL database without password:
 
