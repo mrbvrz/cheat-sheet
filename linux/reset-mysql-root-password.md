@@ -1,4 +1,4 @@
-# Reset root mysql password
+# Reset Root Mysql Password
 
 - Let's start by stopping the currently running MySQL database: `sudo service mysql stop`
 
@@ -7,17 +7,17 @@
   `sudo mkdir -p /var/run/mysqld`
   `sudo chown mysql:mysql /var/run/mysqld`
 
-Once ready manually start MySQL with the following linux command and options:
+- Once ready manually start MySQL with the following linux command and options:
 
-`sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &`
+  `sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &`
 
-Confirm that the process is running as expected:
+- Confirm that the process is running as expected:
 
-`jobs`
+  `jobs`
 
-At this stage we are able to access MySQL database without password:
+- At this stage we are able to access MySQL database without password:
 
-`mysql -u root`
+  `mysql -u root`
 
 Using the MySQL session first flush privileges:
 
