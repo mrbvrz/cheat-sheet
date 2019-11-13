@@ -1,8 +1,11 @@
-Let's start by stopping the currently running MySQL database:
+# Reset root mysql password
+
+- Let's start by stopping the currently running MySQL database:
 
 `sudo service mysql stop`
 
-Next, create a /var/run/mysqld directory to be used by MySQL process to store and access socket file:
+
+- Next, create a /var/run/mysqld directory to be used by MySQL process to store and access socket file:
 
 `sudo mkdir -p /var/run/mysqld`
 `sudo chown mysql:mysql /var/run/mysqld`
