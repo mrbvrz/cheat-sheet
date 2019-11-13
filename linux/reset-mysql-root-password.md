@@ -12,7 +12,11 @@ The simplest approach to reset MySQL database root password is to execute **mysq
 
 ### Reset by using skip-grant-tables
 
-- Let's start by stopping the currently running MySQL database: `$ sudo service mysql stop`
+- Let's start by stopping the currently running MySQL database: 
+
+  ```console
+  $ sudo service mysql stop
+  ```
 
 - Next, create a **/var/run/mysqld** directory to be used by MySQL process to store and access socket file:
 
