@@ -51,6 +51,5 @@ The simplest approach to reset MySQL database root password is to execute mysql_
   `$ mysql -u root --password=NEWPASSWORD`    
   
   <br>
-  <br>
-  
+
   [Source](https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux)
