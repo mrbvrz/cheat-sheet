@@ -41,7 +41,7 @@ The simplest approach to reset MySQL database root password is to execute **mysq
 - Using the MySQL session first flush privileges: 
 
   ```console
-  mysql> FLUSH PRIVILEGES'
+  mysql> FLUSH PRIVILEGES;
   ```
 
 - Next, reset root password. The following commands will reset MySQL root password to **NEWPASSWORD**
@@ -64,7 +64,11 @@ The simplest approach to reset MySQL database root password is to execute **mysq
   $ sudo pkill mysqld
   $ jobs
   ```                                                                                                                                                                     
-- Lastly, start MYSQL database: `$ sudo service mysql start`
+- Lastly, start MYSQL database: 
+
+  ```console
+  $ sudo service mysql start
+  ```
 
 - If all went well you should now be able to login to your MySQL database with a root password:
 
