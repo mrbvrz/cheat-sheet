@@ -34,19 +34,20 @@ The simplest approach to reset MySQL database root password is to execute **mysq
   ````
 
 - At this stage we are able to access MySQL database without password: 
-  ```console 
+  
+  ```mysql
   $ mysql -u root
   ```
 
 - Using the MySQL session first flush privileges: 
 
-  ```console
+  ```mysql
   mysql> FLUSH PRIVILEGES;
   ```
 
 - Next, reset root password. The following commands will reset MySQL root password to **NEWPASSWORD**
 
-  ```
+  ```mysql
   mysql> USE mysql;
   mysql> UPDATE user SET authentication_string=PASSWORD("NEWPASSWORD") WHERE User='root';
   mysql> UPDATE user SET plugin="mysql_native_password" WHERE User='root';
@@ -54,7 +55,7 @@ The simplest approach to reset MySQL database root password is to execute **mysq
 
 - Quit MySQL session: 
 
-  ```console
+  ```mysql
   mysql> quit
   ```         
 
