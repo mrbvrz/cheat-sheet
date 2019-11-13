@@ -7,7 +7,11 @@ this problem occurs on **Elementary OS 5.0** and **Mysql Version 14.14**, fails 
 
 ### Reset by using mysql_secure_installation
 
-The simplest approach to reset MySQL database root password is to execute **mysql_secure_installation** program and when prompted entering your new root MySQL password: `$ sudo mysql_secure_installation`
+The simplest approach to reset MySQL database root password is to execute **mysql_secure_installation** program and when prompted entering your new root MySQL password: 
+
+```console
+$ sudo mysql_secure_installation
+```
 
 
 ### Reset by using skip-grant-tables
