@@ -1,6 +1,8 @@
 # Install Ayatana AppIndicators on Elementary OS 5.0
 
-## Install Ayatana AppIndicators
+The latest **elementary OS 5.0 Juno**, does not support the old Ayatana AppIndicators by default. This is how to re-enable AppIndicators on elementary OS Juno.
+
+### Install Ayatana AppIndicators
 
 - First, copy `indicator-application.desktop` to **~/.config** directory, and add `Pantheon` to `OnlyShowIn` line in `indicator-application.desktop`:
 
@@ -16,9 +18,9 @@
   $ wget http://ppa.launchpad.net/elementary-os/stable/ubuntu/pool/main/w/wingpanel-indicator-ayatana/wingpanel-indicator-ayatana_2.0.3+r27+pkg17~ubuntu0.4.1.1_amd64.deb
   $ sudo dpkg -i wingpanel-indicator-ayatana_2.0.3+r27+pkg17~ubuntu0.4.1.1_amd64.deb
   ```
+<br>
 
-
-## Fix Big Gap Between Icons 
+### Fix Big Gap Between Icons 
 
 - Download [libayatana_compatibility.so.zip](https://github.com/mdh34/elementary-indicators/files/3776351/libayatana_compatibility.so.zip)
 
