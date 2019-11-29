@@ -30,5 +30,6 @@
 
 - reboot
 
-  <br>  
+  <br> 
+  
   [Source](https://github.com/mdh34/elementary-indicators/issues/1)
