@@ -2,7 +2,7 @@
 
 The latest **elementary OS 5.0 Juno**, does not support the old Ayatana AppIndicators by default. This is how to re-enable AppIndicators on elementary OS Juno.
 
-### Install Ayatana AppIndicators
+## Install Ayatana AppIndicators
 
 - First, copy `indicator-application.desktop` to **~/.config** directory, and add `Pantheon` to `OnlyShowIn` line in `indicator-application.desktop`:
 
@@ -20,7 +20,7 @@ The latest **elementary OS 5.0 Juno**, does not support the old Ayatana AppIndic
   ```
 <br>
 
-### Fix Big Gap Between Icons 
+## Fix Big Gap Between Icons 
 
 - Download [libayatana_compatibility.so.zip](https://github.com/mdh34/elementary-indicators/files/3776351/libayatana_compatibility.so.zip)
 
