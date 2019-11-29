@@ -1,6 +1,6 @@
 # Install Ayatana AppIndicators on Elementary OS 5.0
 
-## Install Ayatana AppIndicators :kiss:
+## Install Ayatana AppIndicators
 
 - First, copy `indicator-application.desktop` to **~/.config** directory, and add `Pantheon` to `OnlyShowIn` line in `indicator-application.desktop`:
 
@@ -18,7 +18,7 @@
   ```
 
 
-## Fix Big Gap Between Icons :skull:
+## Fix Big Gap Between Icons 
 
 - Download [libayatana_compatibility.so.zip](https://github.com/mdh34/elementary-indicators/files/3776351/libayatana_compatibility.so.zip)
 
@@ -30,8 +30,5 @@
 
 - reboot
 
-  <br>
-
-  :space_invader:  :space_invader:  :space_invader:
-  
+  <br>  
   [Source](https://github.com/mdh34/elementary-indicators/issues/1)
