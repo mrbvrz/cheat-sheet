@@ -13,7 +13,6 @@ $ sudo chmod +x PacketTracer-7.2.2-ubuntu-setup.run
 $ ./PacketTracer-7.2.2-ubuntu-setup.run
 ```
 
-<br>
 
 ## Fix Packet Tracer 7 Cannot Launch
 
