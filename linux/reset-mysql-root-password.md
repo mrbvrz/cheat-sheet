@@ -2,6 +2,7 @@
 
 this problem occurs in **Elementary OS 5.0** and **Mysql Version 14.14**, fails to enter mysql with an error message: `mysqli_real_connect (): (HY000 / 1698): Access denied for user 'root' @ 'localhost'`
 
+
 ## Reset by using mysql_secure_installation
 
 The simplest approach to reset MySQL database root password is to execute **mysql_secure_installation** program and when prompted entering your new root MySQL password: 
@@ -9,7 +10,7 @@ The simplest approach to reset MySQL database root password is to execute **mysq
 ```console
 $ sudo mysql_secure_installation
 ```
-<br>
+
 
 ## Reset by using skip-grant-tables
 
