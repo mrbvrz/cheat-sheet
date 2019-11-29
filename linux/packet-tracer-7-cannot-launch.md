@@ -1,4 +1,6 @@
-# Packet Tracer 7 on Elementary OS 5.0 Cannot Launch
+# Packet Tracer 7 Cannot Launch
+
+Packet Tracer is a network simulation tool provided by Cisco Systems. As of August 2017, Packet Tracer is available freely for Linux, Android, iOS and Windows. As part of the SUPINFO curriculum, we use Packet Tracer in Cisco Networking Courses. This how to install Packet Tracer on Ubuntu Linux and fix issues encountered during installation.
 
 ## Install Packet Tracer
 
