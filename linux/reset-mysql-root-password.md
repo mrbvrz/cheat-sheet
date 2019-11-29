@@ -86,7 +86,5 @@ $ sudo mysql_secure_installation
   ```    
   
   <br>
-
-  :space_invader:  :space_invader:  :space_invader:
   
   [Source](https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux)
