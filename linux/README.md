@@ -1,1 +1,2 @@
-
+- Nerd Font - https://github.com/ryanoasis/nerd-fonts
+- Spaceship Prompt - https://github.com/denysdovhan/spaceship-prompt
