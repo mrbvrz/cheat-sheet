@@ -25,14 +25,14 @@ The latest **elementary OS 5.0 Juno**, does not support the old Ayatana AppIndic
 
 - Download [libayatana_compatibility.so.zip](https://github.com/mdh34/elementary-indicators/files/3776351/libayatana_compatibility.so.zip)
 
-- Go To (with sudo) `/usr/lib/x86_64-linux-gnu/wingpanel/`
+- Go to (with sudo) `/usr/lib/x86_64-linux-gnu/wingpanel/`
 
-- backup your libayatana_compatibility.so
+- Backup your libayatana_compatibility.so
 
 - Replace the libayatana_compatibility.so with the zipped one
 
-- reboot
+- Reboot
 
-  <br> 
+  <br>
   
   [Source](https://github.com/mdh34/elementary-indicators/issues/1)
