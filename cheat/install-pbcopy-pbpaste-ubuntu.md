@@ -7,13 +7,13 @@
 Like I already said, pbcopy and pbpaste commands are not available in Linux. However, we can replicate the functionality of pbcopy and pbpaste commands using xclip and/or xsel commands via shell aliasing. Both xclip and xsel packages available in the default repositories of most Linux distributions. Please note that you need not to install both utilities. Just install any one of the above utilities.
 
 ```console
-sudo apt install xclip xsel
+$ sudo apt install xclip xsel
 ```
 
 Once installed, you need create aliases for pbcopy and pbpaste commands. To do so, edit your `~/.bashrc` file:
 
 ```console
-vi ~/.bashrc
+$ vi ~/.bashrc
 ```
 
 If you want to use xclip, paste the following lines:
@@ -35,7 +35,7 @@ Save and close the file.
 Next, run the following command to update the changes in `~/.bashrc` file.
 
 ```console
-source ~/.bashrc
+$ source ~/.bashrc
 ```
 
 ## Use pbcopy and pbpaste Commands On Linux
@@ -43,7 +43,7 @@ source ~/.bashrc
 The pbcopy command will copy the text from stdin into clipboard buffer.
 
 ```console
-echo "Hello World!" | pbcopy
+$ echo "Hello World!" | pbcopy
 ```
 
 You can access this content later and paste them anywhere you want using pbpaste command.
