@@ -1,6 +1,6 @@
 # Fix MongoDB Common Errors on Ubuntu
 
-## Failed to Unlink Socket `mongodb-27017.sock`.
+## Failed to Unlink Socket mongodb-27017.sock.
 
 Error message : `Failed to unlink socket file /tmp/mongodb-27017.sock Operation not permitted`.
 
@@ -20,9 +20,18 @@ Error message : `Failed to unlink socket file /tmp/mongodb-27017.sock Operation 
     $ sudo chown -R $USER /tmp/mongodb-27017.sock
     $ sudo systemctl restart mongod
     ```
+    
+    and/or if that doesn't work you can do as below.
+    
+* Run mongod with sudo.
+    
+    ```console
+    $ sudo mongod
+    ```
+    
+<br>
 
-
-## Attempted to create a lock file on a read-only directory: `/data/db`.
+## Attempted to create a lock file on a read-only directory: /data/db.
 
 Error message : `exception in initAndListen: IllegalOperation: Attempted to create a lock file on a read-only directory: /data/db, terminating`.
 
