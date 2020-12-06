@@ -37,12 +37,12 @@ These are some of the commands that i use often with youtube-dl, the command bel
     ```
 
 
-* Download youtube video with auto subtittle and embed in video 
-	```
-	$ youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx
-	```
+* Download youtube with custom video and audio quality
+    ```
+    $ youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx
+    ```
 
-	or for clean-name video :
+    or for clean-name video :
 
 	```
 	$ youtube-dl -f 137+251 -o '%(title)s.%(ext)s https://www.youtube.com/watch?v=xxxxx
