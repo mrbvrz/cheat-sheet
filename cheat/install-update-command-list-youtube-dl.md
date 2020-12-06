@@ -16,13 +16,13 @@
 1. Open terminal and run 
 
    ```console
-   $ sudo apt install youtube-dl ffmpeg
+   sudo apt install youtube-dl ffmpeg
    ```
 
 2. Update youtube-dl (optional) 
 
    ```console
-   $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl
+   sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl
    ```
 
 ## Command List (often used for)
@@ -32,39 +32,37 @@ These are some of the commands that i use often with youtube-dl, the command bel
 *note: if can't download using the full video url (**https://www.youtube.com/watch?v=xxxxx**), then download with a short url (**https://youtu.be/xxxxx**), or you can use video id, which is at the end of the url (**xxxxx**). - this happened to me when using fish-shell* 
 
 * Check video and audio quality 
- 	```
-    $ youtube-dl -F https://www.youtube.com/watch?v=xxxxx
-    ```
+	```
+	youtube-dl -F https://www.youtube.com/watch?v=xxxxx
+	```
 
-
-* Download youtube with custom video and audio quality
+* Download youtube with custom video and audio quality 
     ```
-    $ youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx
+	 youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx
     ```
 
     or for clean-name video :
 
-	```
-	$ youtube-dl -f 137+251 -o '%(title)s.%(ext)s https://www.youtube.com/watch?v=xxxxx
+ 	```
+	youtube-dl -f 137+251 -o '%(title)s.%(ext)s https://www.youtube.com/watch?v=xxxxx
 	```
 	
-
 * Download youtube video with auto subtittle and embed in video 
 	```
-	$ youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx --write-auto-sub --embed-subs
+	youtube-dl -f 137+251 https://www.youtube.com/watch?v=xxxxx --write-auto-sub --embed-subs
 	```
 
 * Download video from external link file (with quality option) 
 	```
-	$ youtube-dl -f 248+140 -a list.txt
+	youtube-dl -f 248+140 -a list.txt
 	```
 
 * Download youtube playlist videos in separate directory indexed by video order in a playlist 
 	```
-	$ youtube-dl -f 22+278 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/watch\?v\=xxxxx\&list\=xxxxx
+	youtube-dl -f 22+278 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/watch\?v\=xxxxx\&list\=xxxxx
 	```
 
 * Download all playlists of youtube channel/user keeping each playlist in separate directory
-	```console
-	$ youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/user/TheLinuxFoundation/playlists
+	```
+	youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/user/TheLinuxFoundation/playlists
 	```
