@@ -15,13 +15,13 @@
 
 1. Open terminal and run 
 
-   ```console
+   ```
    sudo apt install youtube-dl ffmpeg
    ```
 
 2. Update youtube-dl (optional) 
 
-   ```console
+   ```
    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl && sudo chmod a+rx /usr/local/bin/youtube-dl
    ```
 
