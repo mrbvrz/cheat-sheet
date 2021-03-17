@@ -51,3 +51,13 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2.service
 
 
+## 404 Not Found, The requested URL was not found on this server.
+
+create or edit .htaccess
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
