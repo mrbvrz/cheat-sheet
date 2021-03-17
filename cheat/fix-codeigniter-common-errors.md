@@ -61,3 +61,17 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>`
+
+## Confirm Form Resubmission, ERR_CACHE_MISS
+
+`
+public function __construct() {
+
+		parent::__construct();
+		
+		header('Cache-Control: no-cache, must-revalidate, max-age=0');
+		header('Cache-Control: post-check=0, pre-check=0',false);
+		header('Pragma: no-cache');
+		   
+		}
+      `
