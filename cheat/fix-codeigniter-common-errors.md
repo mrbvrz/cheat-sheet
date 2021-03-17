@@ -55,9 +55,9 @@ sudo systemctl restart apache2.service
 
 create or edit .htaccess
 
-<IfModule mod_rewrite.c>
+`<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
-</IfModule>
+</IfModule>`
