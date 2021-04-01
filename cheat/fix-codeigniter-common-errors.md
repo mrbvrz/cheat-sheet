@@ -108,3 +108,5 @@ function redirect_ssl() {
         if ($_SERVER['SERVER_PORT'] == 443) redirect($CI->uri->uri_string());
     }
 }
+
+https://stackoverflow.com/questions/42625147/how-to-force-ssl-in-codeigniter
