@@ -1,9 +1,28 @@
-# Fix Codeigniter Common Errors
+# Codeigneter 3 Cheat Sheet
+
+Kumpulan 
 
 - Codeigniter 3
 - PHP 7.2.24
 - MySQL 14.14
 - Elementary OS 5.1
+
+## Dynamic base_url() and site_url() Codeigniter 3
+
+CodeIgniter mencoba mendeteksi secara otomatis URL web Anda. Ini dilakukan semata-mata untuk kenyamanan saat Anda memulai pengembangan aplikasi baru.
+
+Deteksi otomatis tidak pernah dapat diandalkan dan juga memiliki implikasi keamanan, itulah sebabnya Anda harus selalu mengonfigurasinya secara manual!
+
+Salah satu perubahan dalam CodeIgniter 3.0.3 adalah cara kerja deteksi otomatis ini, dan lebih khusus lagi sekarang jatuh kembali ke alamat IP server alih-alih nama host yang diminta oleh klien. Oleh karena itu, jika Anda pernah mengandalkan deteksi otomatis, itu akan mengubah cara kerja situs web Anda sekarang.
+
+ubah `../config/config.php` dengan mengisi `$config['base_url']` dengan code dibawah ini.
+
+```php
+$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+$config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
+$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+```
+
 
 ## Error Number: 1055
 
@@ -24,7 +43,7 @@ Lalu restart mysql dengan perintah berikut
 
 ## Error "the requested URL not found on this server"
 
-sudo nano /etc/apache2/apache2.conf
+`sudo nano /etc/apache2/apache2.conf`
 
 Setelah itu akan muncul isi file konfigurasi apache2.conf pada terminal. Cari tulisan ini:
 
@@ -64,22 +83,21 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 
 ## Confirm Form Resubmission, ERR_CACHE_MISS
 
-`
+```php
 public function __construct() {
-
-		parent::__construct();
+	parent::__construct();
 		
-		header('Cache-Control: no-cache, must-revalidate, max-age=0');
-		header('Cache-Control: post-check=0, pre-check=0',false);
-		header('Pragma: no-cache');
-		   
-		}
-      `
-
+	header('Cache-Control: no-cache, must-revalidate, max-age=0');
+	header('Cache-Control: post-check=0, pre-check=0',false);
+	header('Pragma: no-cache');
+}
+```
 
 ## Default/ Force SSL 
-application/config/config.php
 
+**`../application/config/config.php`**
+
+```php
 $config['enable_hooks'] = TRUE;
 
 application/config/hooks.php
@@ -89,13 +107,13 @@ $hook['post_controller_constructor'][] = array(
     'filename' => 'ssl.php',
     'filepath' => 'hooks'
 );
+```
 
+**`../application/hooks/ssl.php`**
 
-
-application/hooks/ssl.php
-
+```php
 function redirect_ssl() {
-    $CI =& get_instance();
+	$CI =& get_instance();
     $class = $CI->router->fetch_class();
     $exclude =  array('client');  // add more controller name to exclude ssl.
     if(!in_array($class,$exclude)) {
@@ -108,5 +126,4 @@ function redirect_ssl() {
         if ($_SERVER['SERVER_PORT'] == 443) redirect($CI->uri->uri_string());
     }
 }
-
-https://stackoverflow.com/questions/42625147/how-to-force-ssl-in-codeigniter
+```
