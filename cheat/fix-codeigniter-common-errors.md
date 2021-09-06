@@ -41,6 +41,11 @@ Lalu restart mysql dengan perintah berikut
 *Testing pada ubuntu 18.10(Cosmic), MySQL 5.7
 *masalah bukan pada CodeIgniter saja
 
+https://dev.mysql.com/doc/refman/8.0/en/group-by-handling.html
+
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+
+
 ## Error "the requested URL not found on this server"
 
 `sudo nano /etc/apache2/apache2.conf`
