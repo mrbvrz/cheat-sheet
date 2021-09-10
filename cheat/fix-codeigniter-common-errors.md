@@ -23,6 +23,15 @@ $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 ```
 
+## Error Require-dev.mikey179/vfsStream Is Invalid
+
+Cara mengatasi error yang sering dialami pada Codeigniter 3 ketika akan melakukan instalasi library PHP melalui composer.
+
+```console
+require-dev.mikey179/vfsStream is invalid, it should not contain uppercase characters. 
+Please use mikey179/vfsstream instead
+```
+edit `composer.json` pada folder projek, dan ubah `mikey179/vfsStream` menjadi `mikey179/vfsstream` **(huruf kecil semua)**.
 
 ## Error Number: 1055
 
