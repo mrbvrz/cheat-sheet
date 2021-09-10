@@ -1,11 +1,6 @@
 # Codeigneter 3 Cheat Sheet
 
-Kumpulan 
 
-- Codeigniter 3
-- PHP 7.2.24
-- MySQL 14.14
-- Elementary OS 5.1
 
 ## Dynamic base_url() and site_url() Codeigniter 3
 
@@ -138,6 +133,43 @@ function redirect_ssl() {
         // redirecting with no ssl.
         $CI->config->config['base_url'] = str_replace('https://', 'http://', $CI->config->config['base_url']);
         if ($_SERVER['SERVER_PORT'] == 443) redirect($CI->uri->uri_string());
+    }
+}
+```
+
+## Send email with default libraries
+
+```php
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Email extends CI_Controller {
+    public function index(){
+        $config = Array(
+            'protocol'  => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'mrbvrz@gmail.com',
+            'smtp_pass' => 'password',
+            'mailtype'  => 'html',
+            'charset'   => 'iso-8859-1'
+        );
+
+        $this->load->library('email', $config);
+
+        $this->email->set_newline("\r\n");
+
+        $this->email->from('mrbvrz@gmail.com','Hasan Suryaman');
+        $this->email->to('hasan.suryaman@gmail.com');
+        // $this->email->cc('');
+        // $this->email->bdd('');
+
+        $this->email->subject('Send email from Codeigneter 3');
+        $this->email->message('This is just test sending email from <b>Codeigneter 3</b> with default library.');
+
+        return $this->email->send();
+
+        // echo $this->email->print_debugger();
     }
 }
 ```
