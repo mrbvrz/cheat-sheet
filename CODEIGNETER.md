@@ -30,7 +30,7 @@ function datalayanan($jenis, $status, $startdate, $enddate){
 
         $query = $this->db->get();
         return $query->result();
-    }
+}
 ```
 
 ## Menghitung jumlah array
