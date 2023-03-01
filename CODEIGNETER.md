@@ -2,6 +2,21 @@
 
 Kumpulan potongan code yang digunakan pada saat membuat aplikasi dengan Codeigneter, dan dirasa perlu untuk disimpan dan didokumentasikan.
 
+## Option select selected value
+
+```html
+<div class="form-group col-md-6">
+        <label for="inputState">Status Pengajuan</label>
+        <select id="inputState" class="form-control" name="status">
+                <option selected value="">Semua</option>
+                <option value="Pengajuan" <?php if($status == "Pengajuan") {?> selected="selected" <?php } ?>>Pengajuan Baru</option>
+                <option value="Validasi" <?php if($status == "Validasi") {?> selected="selected" <?php } ?>>Pengajuan Diproses</option>
+                <option value="Kesalahan Pada Berkas" <?php if($status == "Kesalahan Pada Berkas") {?> selected="selected" <?php } ?>>Pengajuan Ditolak</option>
+                <option value="Surat Selesai" <?php if($status == "Surat Selesai") {?> selected="selected" <?php } ?>>Pengajuan Selesai</option>
+        </select>
+</div>
+```
+
 ## Multiple filter from request (form)
 
 Untuk filter bisa menggunakan code dibawah ini untuk filter, dapat diletakkan di `Model`. filter yang digunakan adalah `where`, `like` dan `wherebetween` pada tanggal.
