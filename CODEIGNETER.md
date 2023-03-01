@@ -40,3 +40,9 @@ Menghitung jumlah pada data dengan bentuk `array`
 ```php
 <?php echo count($layanan); ?>
 ```
+
+## Menggunakan tenary operator
+
+```php
+<?= count($layanan) == 0 ? "Tidak ada data" : count($layanan) ?>
+```
