@@ -138,6 +138,111 @@ ln -s /usr/share/phpMyAdmin /usr/share/nginx/html/
 systemctl restart nginx
 ```
 
+Firewalld rules
+```
+sudo firewall-cmd --permanent --zone=public --add-service=http
+```
+```
+sudo firewall-cmd --permanent --zone=public --add-service=https
+```
+```
+sudo firewall-cmd --reload
+```
+
+Create Server Block Directories
+```
+sudo mkdir -p /var/www/your_domain/html
+```
+```
+sudo chown -R $USER:$USER /var/www/your_domain/html
+```
+```
+sudo chmod -R 755 /var/www/your_domain
+```
+
+Create Nginx Server Block
+```
+sudo mkdir /etc/nginx/sites-available
+sudo mkdir /etc/nginx/sites-enabled
+```
+```
+sudo nano /etc/nginx/nginx.conf
+```
+```
+user nginx;
+worker_processes auto;
+error_log /var/log/nginx/error.log;
+pid /run/nginx.pid;
+
+# Load dynamic modules. See /usr/share/doc/nginx/README.dynamic.
+include /usr/share/nginx/modules/*.conf;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 4096;
+
+    include             /etc/nginx/mime.types;
+    default_type        application/octet-stream;
+
+###EDIT HERE### #
+#  include /etc/nginx/conf.d/*.conf;
+    include /etc/nginx/sites-enabled/*.conf;
+}
+```
+```
+sudo nano /etc/nginx/sites-available/your_domain.conf
+```
+```
+server {
+
+ listen 80;
+ listen [::]:80;
+
+ server_name your_domain www.your_domain;
+ root /var/www/your_domain/html;
+
+  index index.html index.htm;
+
+ location / {
+  try_files $uri $uri/ =404;
+ }
+}
+```
+```
+sudo ln -s /etc/nginx/sites-available/your_domain.conf /etc/nginx/sites-enabled/
+```
+```
+sudo nano /etc/nginx/nginx.conf
+```
+Uncomment the following line or add it if it is not present. This step is crucial to prevent potential issues with your Nginx configuration. In case of accidental duplication, the nginx test command will reveal this and provide information for resolution.
+```
+server_names_hash_bucket_size 64;
+```
+```
+sudo nginx -t
+```
+example output:
+```
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+```
+sudo systemctl restart nginx
+```
+
 ### Install virtualbox
 
 Install dependencies
