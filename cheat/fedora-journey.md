@@ -294,7 +294,7 @@ wget https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Exten
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.6a-155176.vbox-extpack
 ```
 
-Fix problem connect VPN PPTP
+### Fix problem connect VPN PPTP
 ```
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p gre -j ACCEPT
 ```
