@@ -2,6 +2,13 @@
 
 ## Just a summary of the journey in using fedora linux
 
+### Changin hostname
+```
+sudo hostnamectl set-hostname --pretty "Mrbvrz Machine"
+```
+```
+sudo hostnamectl set-hostname --static svr.mrbvrz
+```
 ### Prevent Sleep on Lid
 Find the line `HandleLidSwitch=ignore` and uncomment it (remove the # at the beginning of the line).
 ```
