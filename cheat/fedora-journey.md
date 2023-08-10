@@ -305,3 +305,15 @@ To add a new repository, do the following as `root`.
 - ```
   rm /etc/yum.repos.d/file_name.repo
   ```
+
+## Exclude package from DNF update
+
+```
+sudo nano /etc/dnf/dnf.conf
+```
+
+add on the last line
+
+```
+exclude=live555-2023.06.20-2.fc38.x86_64
+```
