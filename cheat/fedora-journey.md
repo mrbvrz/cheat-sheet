@@ -8,11 +8,21 @@ sudo hostnamectl set-hostname --static svr.mrbvrz
 ```
 ## Prevent Sleep on Lid
 
-Find the line `HandleLidSwitch=ignore` and uncomment it (remove the # at the beginning of the line).
+Edit `/etc/systemd/logind.conf` and uncomment as below (remove the # at the beginning of the line).
+
 ```
-sudo vi /etc/systemd/logind.conf
-sudo systemctl restart systemd-logind
+HandleLidSwitch=suspend 
+HandleLidSwitchDocked=ignore
+LidSwitchIgnoreInhibited=no
 ```
+
+and edit `/etc/UPower/UPower.conf` and change IgnoreLid to true,
+
+```
+IgnoreLid=true
+```
+
+I use the config above so that the laptop stays alive when connected to an external monitor even when the laptop is lid.
 
 ## Change DNS Server
 ```
